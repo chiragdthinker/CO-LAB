@@ -1,0 +1,12 @@
+The compressed tarball contains the following files.
+
+1) working.s - Intial working assembly code that we had written.	
+2) Better_Working.s - Final commented assembly code (not yet tested).
+3) hexvalues.dat - Output of the c file in hexadecimal-C matrix
+4) valueshex.dat - Input for the c file in hexadecimal
+5) matrix_multiplication.c - C code for matrix multiplication 
+6) values.c - Input matrix generation code
+7) inp.gdb
+8) test.ld
+9) gdbkama
+10)README

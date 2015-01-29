@@ -1,0 +1,25 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.text           0x000000000000a000     0x4000
+ *(.text)
+ .text          0x000000000000a000     0x4000 mat_mult_protMode_assign2_Template.o
+
+.data
+ *(.data)
+
+.bss
+ *(.bss)
+ *(COMMON)
+
+kama
+ *(kama)
+LOAD mat_mult_protMode_assign2_Template.o
+LOAD /usr/lib32/libc.a
+OUTPUT(mat_mult_protMode_assign2_Template.out elf32-i386)

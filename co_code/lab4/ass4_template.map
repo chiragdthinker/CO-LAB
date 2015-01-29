@@ -1,0 +1,28 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.text           0x000000000000a000     0x6000
+ *(.text)
+ .text          0x000000000000a000     0x6000 ass4_template.o
+
+.data
+ *(.data)
+
+.bss
+ *(.bss)
+ *(COMMON)
+
+kama
+ *(kama)
+LOAD ass4_template.o
+LOAD /usr/lib/libc.a
+OUTPUT(ass4_template.out elf32-i386)
+
+.comment        0x0000000000000000       0x1c
+ .comment       0x0000000000000000       0x1c ass4_template.o
